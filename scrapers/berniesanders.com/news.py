@@ -87,7 +87,7 @@ class ArticlesScraper(Scraper):
                     rec["body"], rec["body_html"] = text, text
                     rec['article_type'] = "ExternalLink"
                 elif text and html:
-                    rec["body"], rec["body_html"] = text, text
+                    rec["body"], rec["body_html"] = text, html
                     try:
                         article["image_url"]
                     except KeyError:
